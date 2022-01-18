@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"/>
+</script>
+
+<script>
+$(document).ready(function(){
+$("p").mouseenter(GestionnaireClickP);
+$("p").mouseleave(mouseoverClickP)});
+
+function GestionnaireClickP(){
+ $(this).css("background-color","red");
+  }
+ function mouseoverClickP(){
+  $(this).css("background-color","blue");
+ } 
+
+</script>
+</head>
+<body>
+
+<p style="border-style:solid">First paragraphe If you click on me, I will be red.</p>
+<p style="border-style:solid">second paragraphe If you click on me, I will be red.</p>
+<p style="border-style:solid">third paragraphe If you click on me, I will be red.</p>
+</body>
+</html>

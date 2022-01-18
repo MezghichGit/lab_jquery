@@ -27,6 +27,16 @@
     <h4>Supprimer un element</h4>
 
 
+    <p>Cours sur html</p>
+    <p>Cours sur javascript</p>
+    <p>Cours sur css</p>
+    <p>Cours sur java</p>
+
+   
+     Taper un text <input id="mytext" type="text" name="mytext"/>
+     <button id="search">Chercher</button>
+
+
     <table align="center" border="1">
         <tr><th>Num</th><th>Titre</th><th>Description</th></tr>
         <tr><td>1</td><td>Javascript</td><td>Langage de programmation</td></tr>
@@ -38,6 +48,20 @@
         $(document).ready(  // si tout le DOM a été chargé
             
         function(){
+
+            $("#search").click(
+                function(){
+                   var v = $("#mytext").val();
+                   if(v.length!=0)
+                    {
+                      $("p:contains("+v+")").css("background-color","red");
+                      $(":not(p:contains("+v+"))").css("background-color","white");
+                    
+                    }
+                }
+            );
+
+
 
             $("tr").mouseover(
                 function(){

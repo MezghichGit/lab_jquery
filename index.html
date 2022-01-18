@@ -16,8 +16,8 @@
 <body>
     <h1 align="center">Hello jQuery</h1>
 
-    <h3><span class="contour">Chargement de la librairie</span></h3>
-    <h3>Les selecteurs jQuery</h3>
+    <h3><span class="contour">Premier H3 Chargement de la librairie</span></h3>
+    <h3>Deuxième H3 Les selecteurs jQuery</h3>
     <h4>Les selecteurs basique</h4>
     <h3>Les évenements</h3>
     <h4>L'evenement Click</h4>
@@ -25,6 +25,14 @@
     <h3>La manipulation du DOM</h3>
     <h4>Ajouter un element</h4>
     <h4>Supprimer un element</h4>
+
+
+    <table align="center" border="1">
+        <tr><th>Num</th><th>Titre</th><th>Description</th></tr>
+        <tr><th>1</th><th>Javascript</th><th>Langage de programmation</th></tr>
+        <tr><th>2</th><th>jQuery</th><th>Bibliothèque de fonction javascript</th></tr>
+        <tr><th>3</th><th>Ajax</th><th>Technique javascript pour la mise à jour partielle d'une page web</th></tr>
+    </table>
     
     <script>
         $(document).ready(  // si tout le DOM a été chargé
@@ -37,21 +45,27 @@
                     alert("Vous avez taper un H4")
                 });
 
-                $(".contour").mouseenter(function(){
-                    alert("Vous avez entrer dans la zone d'un H3")
-                });
-
-                $(".contour").mouseleave(function(){
-                    alert("Bye Bye")
-                });
-
-                /*$("h3").mouseenter(function(){
+                /*$(".contour").mouseenter(function(){
                     alert("Vous avez entrer dans la zone d'un H3")
                 });*/
+
+                /*$(".contour").mouseleave(function(){
+                    alert("Bye Bye")
+                });*/
+
+                $("h3:first").click(function(){
+                    alert("Vous avez cliquer sur la zone d'un H3")
+                });
 
                 $("h2").click(function(){
                     alert("Vous avez taper un H2")
                 });
+
+                $("tr:even").click(
+                    function(){
+                        alert("Vous avez taper une ligne paire");
+                    }
+                );
 
         });
 

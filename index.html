@@ -14,6 +14,13 @@
 </head>
 
 <body>
+
+    <p id="p1">Un peu de <i>texte</i> <em>important</em>.</p> 
+
+    <p id="p2">Un peu de texte <strong>important paragraph 2</strong>.</p> 
+
+
+
     <h1 align="center">Hello jQuery</h1>
 
     <h3><span class="contour">Premier H3 Chargement de la librairie</span></h3>
@@ -48,6 +55,16 @@
         $(document).ready(  // si tout le DOM a été chargé
             
         function(){
+
+            $("#p2").click(
+                function(){
+                    //alert($("#p1").html());
+                    //$("#p1").html("<h1>Un autre texte</h1>");
+                   // $("#p1").prepend("<p>Un autre texte</p>");
+
+                   $("<span>(Fin de paragraphe)</span>").appendTo($("#p2"));
+
+                });
 
             $("#search").click(
                 function(){

@@ -4,26 +4,68 @@
     <title>jQeury</title>
     <script type="text/javascript" src="jquery.js"></script>
     
-    <script>
-        $(document).ready(  // si tout le DOM a été chargé
-            
-        function(){
-             //console.log("Hello ISIKA");
-             alert("Hello ISIKA");
-        });
-
-    </script>
+    <style>
+        .contour
+        {
+            border: 1px solid red;
+        }
+    </style>
 
 </head>
 
 <body>
     <h1 align="center">Hello jQuery</h1>
 
-    <h3>Chargement de la librairie</h3>
+    <h3><span class="contour">Chargement de la librairie</span></h3>
     <h3>Les selecteurs jQuery</h3>
+    <h4>Les selecteurs basique</h4>
     <h3>Les évenements</h3>
+    <h4>L'evenement Click</h4>
+    <h2>L'evenement MouseOver</h2>
     <h3>La manipulation du DOM</h3>
+    <h4>Ajouter un element</h4>
+    <h4>Supprimer un element</h4>
     
+    <script>
+        $(document).ready(  // si tout le DOM a été chargé
+            
+        function(){
+             //console.log("Hello ISIKA");
+             //alert("Hello ISIKA");
+
+                $("h4").click(function(){
+                    alert("Vous avez taper un H4")
+                });
+
+                $(".contour").mouseenter(function(){
+                    alert("Vous avez entrer dans la zone d'un H3")
+                });
+
+                $(".contour").mouseleave(function(){
+                    alert("Bye Bye")
+                });
+
+                /*$("h3").mouseenter(function(){
+                    alert("Vous avez entrer dans la zone d'un H3")
+                });*/
+
+                $("h2").click(function(){
+                    alert("Vous avez taper un H2")
+                });
+
+        });
+
+        /*
+        $(document).ready(info);
+
+        function info(){
+
+           console.log("Mon cours sur jQuery");
+
+           // window.document.writeln("Méthode info");
+        }*/
+
+    </script>
 </body>
 
 </html>
